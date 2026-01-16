@@ -58,7 +58,7 @@ The system supports creating, viewing, updating, and deleting merchants, with cl
 ---
 
 ## 📂 Project Structure
-
+```
 merchant-management-system/
 ├── backend/
 │   ├── merchants/
@@ -76,7 +76,7 @@ merchant-management-system/
 │
 ├── docker-compose.yml
 └── README.md
-
+```
 
 ---
 
@@ -94,8 +94,6 @@ DB_PASSWORD=merchant_password
 DB_HOST=db
 DB_PORT=5432
 ```
-
-> **Important:** Never commit `.env` files to version control. Use `.env.example` instead.
 
 ---
 
@@ -191,16 +189,27 @@ curl -X DELETE http://localhost:8000/api/merchants/1/
 
 ## 📸 Screenshots
 
-```text
-assets/screenshots/
-├── Dashboard-1.png
-├── Dashboard-2.png
-├── Create-merchant.png
-├── Create-merchant-success.png
-├── Update-merchant-primary-info.png
-├── Delete-merchant.png
-└── Django-rest-api-page.png
-```
+### Dashboard Overview
+![Dashboard overview](assets/screenshots/Dashboard-1.png)
+
+### Merchants List
+![Dashboard merchants list](assets/screenshots/Dashboard-2.png)
+
+### Create Merchant Form
+![Create merchant form](assets/screenshots/Create-merchant.png)
+
+### Create Merchant Success
+![Create merchant success](assets/screenshots/Create-merchant-success.png)
+
+### Update Merchant Primary Information
+![Update merchant primary information](assets/screenshots/Update-merchant-primary-info.png)
+
+### Delete Merchant Confirmation
+![Delete merchant confirmation](assets/screenshots/Delete-merchant.png)
+
+### Django REST API Page
+![Django REST API page](assets/screenshots/Django-rest-api-page.png)
+
 
 ---
 
