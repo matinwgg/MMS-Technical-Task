@@ -1,4 +1,3 @@
-````md
 # Merchant Management System (MMS)
 
 ## 📌 Overview
@@ -60,7 +59,6 @@ The system supports creating, viewing, updating, and deleting merchants, with cl
 
 ## 📂 Project Structure
 
-```text
 merchant-management-system/
 ├── backend/
 │   ├── merchants/
@@ -78,7 +76,7 @@ merchant-management-system/
 │
 ├── docker-compose.yml
 └── README.md
-````
+
 
 ---
 
