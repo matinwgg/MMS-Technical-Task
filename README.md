@@ -190,25 +190,25 @@ curl -X DELETE http://localhost:8000/api/merchants/1/
 ## 📸 Screenshots
 
 ### Dashboard Overview
-![Dashboard overview](assets/screenshots/Dashboard-1.png)
+![Dashboard overview](frontend/src/assets/screenshots/Dashboard-1.png)
 
 ### Merchants List
-![Dashboard merchants list](assets/screenshots/Dashboard-2.png)
+![Dashboard merchants list](frontend/src/assets/screenshots/Dashboard-2.png)
 
 ### Create Merchant Form
-![Create merchant form](assets/screenshots/Create-merchant.png)
+![Create merchant form](frontend/src/assets/screenshots/Create-merchant.png)
 
 ### Create Merchant Success
-![Create merchant success](assets/screenshots/Create-merchant-success.png)
+![Create merchant success](frontend/src/assets/screenshots/Create-merchant-success.png)
 
 ### Update Merchant Primary Information
-![Update merchant primary information](assets/screenshots/Update-merchant-primary-info.png)
+![Update merchant primary information](frontend/src/assets/screenshots/Update-merchant-primary-info.png)
 
 ### Delete Merchant Confirmation
-![Delete merchant confirmation](assets/screenshots/Delete-merchant.png)
+![Delete merchant confirmation](frontend/src/assets/screenshots/Delete-merchant.png)
 
 ### Django REST API Page
-![Django REST API page](assets/screenshots/Django-rest-api-page.png)
+![Django REST API page](frontend/src/assets/screenshots/Django-rest-api-page.png)
 
 
 ---
