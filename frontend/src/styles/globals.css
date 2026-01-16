@@ -1,0 +1,341 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Google Font (React-compatible) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Custom Fonts - MTN Brighter Sans */
+@font-face {
+  font-family: "Brighter";
+  src: url("../assets/fonts/MTNBrighterSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brighter";
+  src: url("../assets/fonts/MTNBrighterSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Custom Fonts - Noto Sans */
+@font-face {
+  font-family: "NotoSans";
+  src: url("../assets/fonts/NotoSans-Thin.ttf") format("truetype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("../assets/fonts/NotoSans-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("../assets/fonts/NotoSans-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("../assets/fonts/NotoSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("../assets/fonts/NotoSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("../assets/fonts/NotoSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("../assets/fonts/NotoSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("../assets/fonts/NotoSans-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("../assets/fonts/NotoSans-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+
+/* Custom Fonts - Poppins */
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Thin.ttf") format("truetype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+
+/* Dark mode variant */
+@custom-variant dark (&:is(.dark *));
+
+/* =========================
+   THEME TOKENS
+========================= */
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  /* ✅ FONT VARIABLES (React-safe) */
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  /* Poppins */
+  --font-poppins: 'Poppins', sans-serif;
+  
+
+  /* Brighter */
+  --font-brighter: 'Brighter', sans-serif;
+
+  /* NotoSans */
+  --font-noto: 'NotoSans', sans-serif;
+
+}
+
+/* =========================
+   DARK MODE
+========================= */
+.dark {
+  /* Backgrounds */
+  --background: oklch(0.18 0 0);           /* ~ #1f1f1f */
+  --foreground: oklch(0.92 0 0);           /* soft white */
+
+  --card: oklch(0.22 0 0);                 /* slightly lifted */
+  --card-foreground: oklch(0.92 0 0);
+
+  --popover: oklch(0.22 0 0);
+  --popover-foreground: oklch(0.92 0 0);
+
+  /* Primary */
+  --primary: oklch(0.92 0 0);
+  --primary-foreground: oklch(0.18 0 0);
+
+  /* Secondary / muted */
+  --secondary: oklch(0.26 0 0);
+  --secondary-foreground: oklch(0.88 0 0);
+
+  --muted: oklch(0.26 0 0);
+  --muted-foreground: oklch(0.65 0 0);
+
+  /* Accent */
+  --accent: oklch(0.26 0 0);
+  --accent-foreground: oklch(0.92 0 0);
+
+  /* Destructive */
+  --destructive: oklch(0.55 0.20 27);
+  --destructive-foreground: oklch(0.92 0 0);
+
+  /* UI chrome */
+  --border: oklch(0.30 0 0);
+  --input: oklch(0.30 0 0);
+  --ring: oklch(0.50 0 0);
+
+  /* Charts (unchanged but softened) */
+  --chart-1: oklch(0.65 0.22 41);
+  --chart-2: oklch(0.60 0.18 185);
+  --chart-3: oklch(0.48 0.10 227);
+  --chart-4: oklch(0.75 0.19 84);
+  --chart-5: oklch(0.70 0.18 70);
+
+  /* Sidebar */
+  --sidebar: oklch(0.20 0 0);
+  --sidebar-foreground: oklch(0.92 0 0);
+  --sidebar-primary: oklch(0.92 0 0);
+  --sidebar-primary-foreground: oklch(0.18 0 0);
+  --sidebar-accent: oklch(0.26 0 0);
+  --sidebar-accent-foreground: oklch(0.92 0 0);
+  --sidebar-border: oklch(0.30 0 0);
+  --sidebar-ring: oklch(0.45 0 0);
+}
+
+
+/* =========================
+   SHADCN THEME EXPORT
+========================= */
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --font-poppins: var(--font-poppins);
+  --font-noto: var(--font-noto);
+  --font-brighter: var(--font-brighter);
+
+ --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* =========================
+   BASE STYLES
+========================= */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+/* Custom thin ash scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;                   /* Firefox */
+  scrollbar-color: #c1c1c1 transparent;   /* thumb color, track color */
+  overflow: overlay;                       /* optional: prevents extra space */
+}
+
+/* Webkit browsers: Chrome, Safari, Opera */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;       /* vertical scrollbar thickness */
+  height: 4px;      /* horizontal scrollbar thickness */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;  /* track transparent */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1; /* ash color */
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0; /* hover effect */
+}
+
+/* Remove corner arrows */
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background: transparent;  /* hides the diagonal resize corner */
+}
+
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
